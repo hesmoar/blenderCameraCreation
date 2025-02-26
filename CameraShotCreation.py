@@ -91,10 +91,19 @@ def cam_creation(cameras, collection):
             print(f"{cam} created succesfully!")
 # We need to add a condition if the marker already exists do not create a new one, just update the frame based on the new information
 
+# Set the scene resolution
+def set_resolution(context):
+    scene = context.scene
+    scene.render.resolution_x = scene.resolution_x 
+    scene.render.resolution_y = scene.resolution_y 
+    
+
+# Set the output path
 
 
 new_collection = create_collection()
 Shots = parse_csv_file_to_dict(csv_path)
+
 
 
 set_timeline(Shots)
@@ -112,3 +121,5 @@ print("Current Timeline range: ",bpy.context.scene.frame_start,"-", bpy.context.
 
 
 # If its 1 single scene then markers can be used, if its a scene per camera then timeline can change. 
+
+# Currently the script 

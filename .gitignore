@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store  # For macOS
+*.log
+*.bak
+*.swp  # For Vim users
